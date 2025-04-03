@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API: GET und POST</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h1>Fetch API mit JSON: GET und POST</h1>
+   <h2>Unterschied zwischen GET und POST</h2> 
+<h3>GET-Methode:</h3>
+<ul>
+    <li>Wird verwendet, um Daten vom Server anzufordern.</li>
+    <li>Daten werden in der URL (Query-Parameter) gesendet.</li>
+    <li>Für reine Datenabfragen geeignet (z. B. Laden von Inhalten).</li>
+</ul>
+
+<!-- Button für GET-Anfrage -->
+    <button id="getData">GET: Lade JSON-Daten</button>
+    <pre id="getOutput"></pre>
+
+<h3>POST-Methode:</h3>
+<ul>
+    <li>Wird verwendet, um Daten an den Server zu senden (z. B. Formulare).</li>
+    <li>Daten werden im Body der Anfrage gesendet.</li>
+    <li>Für Änderungen oder das Erstellen von Daten geeignet.</li>
+</ul>
+
+  <!-- Button für POST-Anfrage -->
+  <button id="postData">POST: Sende JSON-Daten</button>
+  <pre id="postOutput"></pre>
+
+<h2>jQuery GET und POST Anfragen</h2>
+
+    <h3>GET-Anfrage</h3>
+    <button id="getDataJquery">Daten abrufen</button>
+    <pre id="getOutputJquery"></pre>
+
+    <h3>POST-Anfrage</h3>
+    <button id="postDataJquery">Daten senden</button>
+    <pre id="postOutputJquery"></pre>
+
+  
+
+    <!-- Verknüpfung der JavaScript-Datei -->
+    <script src="js/get-post-fetch.js"></script>
+    <script src="js/get-post-fetch-j-query.js"></script>
+</body>
+</html>

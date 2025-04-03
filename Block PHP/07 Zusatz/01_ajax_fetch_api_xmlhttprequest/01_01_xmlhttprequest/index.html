@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TXT und JSON Übertragung</title>
+</head>
+<body>
+    <h1>XML, TXT und JSON-Datei übertragen</h1>
+    <h2>TXT-Datei - GET</h2>
+        <button id="loadTxt">Lade TXT-Datei</button>
+        <pre id="txtOutput"></pre>
+
+    <h2>TXT-Datei - POST - Datei-Upload mit Dateivorschau</h2>
+        <label for="fileInput">Wähle eine Datei aus:</label>
+        <input type="file" id="fileInput">
+        <button id="uploadFile">Datei hochladen</button>
+        
+    <h3>Serverantwort:</h3>
+        <pre id="uploadOutput">Noch keine Datei hochgeladen...</pre>
+    <h3>Dateiinhaltsvorschau:</h3>
+        <pre id="fileContent">Kein Inhalt zum Anzeigen...</pre>
+
+    <h2>XML-Daten anzeigen</h2>
+        <button id="loadXml">Lade XML-Daten</button>
+        <div id="xmlOutput"></div>
+
+    <h2>JSON-Datei</h2>
+        <button id="loadJson">Lade JSON-Datei</button>
+        <pre id="jsonOutput"></pre>
+
+    <h2>JSON-Datei mit HTML - Ausgabe</h2>
+        <button id="loadJsonHtml">Lade JSON-Datei</button>
+        <div id="jsonOutput-2"></div>
+
+    <script src="js/txt-example.js"></script>
+    <script src="js/xml-example.js"></script>
+    <script src="js/json-example.js"></script>
+    <script src="js/json-example-mit-ausgabe.js"></script>
+    <script src="js/txt-example-post.js"></script>
+</body>
+</html>

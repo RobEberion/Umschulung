@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<person>
+    <name>Max Mustermann</name>
+    <alter>30</alter>
+    <stadt>Berlin</stadt>
+    <hobbys>
+        <hobby>Lesen</hobby>
+        <hobby>Programmieren</hobby>
+        <hobby>Reisen</hobby>
+    </hobbys>
+</person>
