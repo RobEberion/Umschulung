@@ -1,0 +1,22 @@
+{
+  "name": "07_hello_express",
+  "version": "1.0.0",
+  "description": "Mein Express.js Beispiel",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "js"
+  ],
+  "author": "Maxi Musterfrau",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "express": "^4.21.2"
+  }
+}
