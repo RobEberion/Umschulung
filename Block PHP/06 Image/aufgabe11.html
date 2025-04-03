@@ -1,0 +1,30 @@
+<?php
+// WICHTIG: Diese Datei muss .php heißen, damit PHP-Code interpretiert wird!
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamisches Bild</title>
+</head>
+<body>
+    <h1>Dynamisches Bild</h1>
+
+    <!-- 
+      Rufen hier `aufgabe11.php` auf und hängen einen Zeitstempel an (?ts=...).
+      Dadurch wird ein Cache-Busting erreicht, sodass der Browser das Bild wirklich neu lädt.
+    -->
+    <img id="dynamicImg" src="aufgabe11.php?ts=<?php echo time(); ?>" alt="Dynamisches Bild" />
+
+    <br><br>
+    <button onclick="reloadImg()">Bild aktualisieren</button>
+
+    <script>
+    function reloadImg() {
+        // Aktualisiert den Zeitstempel, um den Browser-Cache zu umgehen
+        document.getElementById('dynamicImg').src = "aufgabe11.php?ts=" + new Date().getTime();
+    }
+    </script>
+</body>
+</html>
+
