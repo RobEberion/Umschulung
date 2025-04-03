@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ProductService"
+    targetNamespace="urn:productservice"
+    xmlns:tns="urn:productservice"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+    <message name="getProductRequest">
+        <part name="id" type="xsd:integer"/>
+    </message>
+    
+    <message name="getProductResponse">
+        <part name="return" type="xsd:string"/>
+    </message>
+
+    <portType name="ProductServicePortType">
+        <operation name="getProduct">
+            <input message="tns:getProductRequest"/>
+            <output message="tns:getProductResponse"/>
+        </operation>
+    </portType>
+
+    <binding name="ProductServiceBinding" type="tns:ProductServicePortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getProduct">
+            <soap:operation soapAction="urn:productservice#getProduct"/>
+            <input>
+                <soap:body use="encoded" namespace="urn:productservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </input>
+            <output>
+                <soap:body use="encoded" namespace="urn:productservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </output>
+        </operation>
+    </binding>
+
+    <service name="ProductService">
+        <port name="ProductServicePort" binding="tns:ProductServiceBinding">
+            <soap:address location="http://localhost:8000/soap/php-soap/server.php"/>
+        </port>
+    </service>
+</definitions>

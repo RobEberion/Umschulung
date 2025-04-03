@@ -1,0 +1,17 @@
+{
+    "name": "caglar/php-webservices",
+    "autoload": {
+        "psr-4": {
+            "Caglar\\PhpWebservices\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CaglarSahinler",
+            "email": "caglar_sa@gmx.de"
+        }
+    ],
+    "require": {
+        "econea/nusoap": "^0.9.17"
+    }
+}
