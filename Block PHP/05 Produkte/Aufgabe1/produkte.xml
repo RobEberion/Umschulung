@@ -1,0 +1,20 @@
+<produkte>
+  <produkt>
+    <id>1</id>
+    <name>Staubsauger</name>
+    <preis>89.99</preis>
+    <kategorie>Haushalt</kategorie>
+  </produkt>
+  <produkt>
+    <id>2</id>
+    <name>Teekanne</name>
+    <preis>15.49</preis>
+    <kategorie>Küche</kategorie>
+  </produkt>
+  <produkt>
+    <id>3</id>
+    <name>Laptop</name>
+    <preis>799.99</preis>
+    <kategorie>Elektronik</kategorie>
+  </produkt>
+</produkte>

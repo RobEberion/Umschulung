@@ -1,0 +1,18 @@
+<bücher>
+    <buch>
+        <titel>Buch A</titel>
+        <preis waehrung="Euro">12.99</preis>
+    </buch>
+    <buch>
+        <titel>Buch B</titel>
+        <preis waehrung="USD">14.99</preis>
+    </buch>
+    <buch>
+        <titel>Buch C</titel>
+        <preis waehrung="Euro">9.90</preis>
+    </buch>
+</bücher>
+
+
+
+

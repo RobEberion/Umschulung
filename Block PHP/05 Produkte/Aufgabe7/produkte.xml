@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<produkte>
+     <produkt>
+          <name>Fernseher</name>
+
+          <kategorie>Elektronik</kategorie>
+
+          <preis>878.90</preis>
+
+     </produkt>
+
+     <produkt>
+          <name>SSD-Festplatte</name>
+
+          <kategorie>Elektronik</kategorie>
+
+          <preis>109.89</preis>
+
+     </produkt>
+
+     <produkt>
+          <name>Esstisch</name>
+
+          <kategorie>Moebel</kategorie>
+
+          <preis>328.90</preis>
+
+     </produkt>
+
+     <produkt>
+          <name>Fernseher</name>
+
+          <kategorie>Elektronik</kategorie>
+
+          <preis>878.90</preis>
+
+     </produkt>
+
+     <produkt>
+          <name>SSD-Festplatte</name>
+
+          <kategorie>Elektronik</kategorie>
+
+          <preis>109.89</preis>
+
+     </produkt>
+
+     <produkt>
+          <name>Esstisch</name>
+
+          <kategorie>Moebel</kategorie>
+
+          <preis>328.90</preis>
+
+     </produkt>
+</produkte>

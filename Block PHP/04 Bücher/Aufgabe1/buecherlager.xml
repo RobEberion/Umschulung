@@ -1,0 +1,10 @@
+<katalog>
+    <buch>
+        <titel>PHP für Einsteiger</titel>
+        <autor>Max Mustermann</autor>
+    </buch>
+    <buch>
+        <titel>Objektorientiertes PHP</titel>
+        <autor>Maria Musterfrau</autor>
+    </buch>
+</katalog>

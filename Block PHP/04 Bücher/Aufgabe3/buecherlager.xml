@@ -1,0 +1,15 @@
+<katalog>
+    <buch>
+        <titel lang="de">Die unendliche Geschichte</titel>
+        <autor>Michael Ende</autor>
+    </buch>
+    <buch>
+        <titel lang="de">Der Prozess</titel>
+        <autor>Franz Kafka</autor>
+    </buch>
+    <buch>
+        <titel lang="de">Der Zauberberg</titel>
+        <autor>Thomas Mann</autor>
+    </buch>
+</katalog>
+

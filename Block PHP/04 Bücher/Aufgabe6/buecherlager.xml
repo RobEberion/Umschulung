@@ -1,0 +1,23 @@
+<katalog>
+    <buch>
+        <titel>Die unendliche Geschichte</titel>
+        <autor>Michael Ende</autor>
+        <preis>9.99</preis>
+        <veroeffentlichungsjahr>1979</veroeffentlichungsjahr>
+    </buch>
+    <buch>
+        <titel>Emil und die Detektive</titel>
+        <autor>Erich Kästner</autor>
+        <preis>7.50</preis>
+        <veroeffentlichungsjahr>1929</veroeffentlichungsjahr>
+    </buch>
+    <buch>
+        <titel>Der Hobbit</titel>
+        <autor>J.R.R. Tolkien</autor>
+        <preis>14.99</preis>
+        <veroeffentlichungsjahr>1937</veroeffentlichungsjahr>
+    </buch>
+</katalog>
+
+
+

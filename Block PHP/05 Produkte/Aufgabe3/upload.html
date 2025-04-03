@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bild hochladen</title>
+</head>
+<body>
+
+<h1>Bild hochladen und EXIF-Daten anzeigen</h1>
+
+<form action="upload_exif.php" method="post" enctype="multipart/form-data">
+    <label for="image">Bild auswählen (JPEG empfohlen):</label>
+    <input type="file" name="image" id="image" accept="image/jpeg,image/tiff,image/jpg">
+    <br><br>
+    <input type="submit" value="Hochladen">
+</form>
+
+</body>
+</html>

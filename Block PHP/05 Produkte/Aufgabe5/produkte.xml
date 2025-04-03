@@ -1,0 +1,33 @@
+<produkte>
+    <produkt>
+        <name>Fernseher</name>
+        <kategorie>Elektronik</kategorie>
+        <preis>799.00</preis>
+    </produkt>
+    <produkt>
+        <name>SSD-Festplatte</name>
+        <kategorie>Elektronik</kategorie>
+        <preis>99.90</preis>
+    </produkt>
+    <produkt>
+        <name>Esstisch</name>
+        <kategorie>Moebel</kategorie>
+        <preis>299.00</preis>
+    </produkt>
+        <produkt>
+        <name>Monitor</name>
+        <kategorie>Elektronik</kategorie>
+        <preis>399.00</preis>
+    </produkt>
+    <produkt>
+        <name>HDD-Festplatte</name>
+        <kategorie>Elektronik</kategorie>
+        <preis>50.90</preis>
+    </produkt>
+    <produkt>
+        <name>Sofa</name>
+        <kategorie>Moebel</kategorie>
+        <preis>399.00</preis>
+    </produkt>
+</produkte>
+

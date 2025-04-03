@@ -1,0 +1,16 @@
+<katalog>
+    <buch kategorie="Romane">
+        <titel>Die unendliche Geschichte</titel>
+        <autor>Michael Ende</autor>
+        <preis>9.99</preis>
+        <veroeffentlichungsjahr>1979</veroeffentlichungsjahr>
+    </buch>
+    <buch kategorie="Kinderbuch">
+        <titel>Emil und die Detektive</titel>
+        <autor>Erich Kästner</autor>
+        <preis>7.50</preis>
+        <veroeffentlichungsjahr>1929</veroeffentlichungsjahr>
+    </buch>
+</katalog>
+
+
