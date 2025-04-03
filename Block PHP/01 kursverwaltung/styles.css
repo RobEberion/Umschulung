@@ -1,0 +1,82 @@
+body {
+    background-color: #324873;
+    color: #F2EB80;
+}
+
+.button {
+    color: #F2EB80;
+    background-color: #324873;
+   	text-decoration: none;
+	display: inline-block;
+	min-width: 110px;
+	height: 25px;
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+	border-style: groove;
+	border-width: 1pt;
+	border-radius: 5px;
+}
+
+
+#zebra {
+    color: #F2EB80;
+    border-collapse: collapse;
+    border: 2px solid;
+    border-color: #D94E4E;
+}
+#zebra thead {
+    background-color: #F2EB80;
+    color: #324873;
+}
+#zebra td {
+    padding: 6px;
+}
+
+#zebra tbody tr.gerade td {
+    background-color: #A6333D;
+}
+
+#zebra tbody tr.ungerade  td {
+    background-color: #D96B2B;
+}
+
+.ausgabe {
+    
+    display: inline-block;
+	margin: 15px 5px 5px 5px;
+	padding: 5px;
+	border-style: groove;
+	border-width: 1pt;
+	border-radius: 5px; 
+}
+
+form {
+    background-color: #324873;
+    color: #F2EB80;
+	margin: 5px;
+	padding: 10px;
+
+}
+
+input {
+	margin: 5px;
+	padding: 2px;
+	border-style: solid;
+	border-width: 1pt;
+	border-radius: 5px;
+}
+
+label {
+    display: inline-block;
+    min-width: 150px;
+    
+}
+
+select {
+	margin: 5px;
+	padding: 2px;
+	border-style: solid;
+	border-width: 1pt;
+	border-radius: 5px
+}
