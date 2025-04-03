@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX: Serverzeit und Name speichern</title>
+    <script>
+        // Funktion zur Anzeige der Serverzeit
+        function fetchServerTime() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "server.php", true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    document.getElementById("serverTime").textContent = response.message;
+                } else {
+                    document.getElementById("serverTime").textContent = "Fehler beim Abrufen der Serverzeit.";
+                }
+            };
+            xhr.send();
+        }
+
+        // Funktion zum Senden der Benutzerdaten an den Server
+        function sendData() {
+            const jsVariable1 = document.getElementById("name").value;
+            const jsVariable2 = "Dynamischer Wert aus JavaScript";
+            const data = {
+                name: jsVariable1,
+                dynamicValue: jsVariable2,
+                timestamp: new Date().toISOString()
+            };
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "process.php", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    document.getElementById("response").textContent = response.message;
+                } else {
+                    document.getElementById("response").textContent = "Fehler beim Senden der Daten.";
+                }
+            };
+            xhr.send(JSON.stringify(data));
+        }
+
+         // Initiales Laden der Serverzeit
+        window.onload = function() {
+            fetchServerTime();
+            setInterval(fetchServerTime, 1000); // Alle Sekunde die Serverzeit aktualisieren
+        };
+    </script>
+</head>
+<body>
+    <h1>Serverzeit und Benutzerdaten speichern</h1>
+
+    <div>
+        <p>Aktuelle Serverzeit: <span id="serverTime"></span></p>
+    </div>
+
+    <div>
+        <h2>Benutzerdaten eingeben</h2>
+        <form onsubmit="event.preventDefault(); sendData();">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Daten senden</button>
+        </form>
+</div>
+    <p id="response"></p>
+</body>
+</html>

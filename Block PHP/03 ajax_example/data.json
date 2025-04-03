@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Caglar Sahinler",
+        "dynamicValue": "Dynamischer Wert aus JavaScript",
+        "timestamp": "2025-01-22T09:39:58.387Z"
+    },
+    {
+        "name": "Robert",
+        "dynamicValue": "Dynamischer Wert aus JavaScript",
+        "timestamp": "2025-01-22T09:40:26.699Z"
+    },
+    {
+        "name": "Robert",
+        "serverTime": "Wednesday, 22. January 2025 13:49:02 (CET)",
+        "dynamicValue": "Dynamischer Wert aus JavaScript",
+        "timestamp": "2025-01-22T12:49:02.434Z"
+    },
+    {
+        "name": "Olejnik",
+        "serverTime": "Wednesday, 22. January 2025 15:24:29 (CET)",
+        "dynamicValue": "Dynamischer Wert aus JavaScript",
+        "timestamp": "2025-01-22T14:24:29.159Z"
+    }
+]
