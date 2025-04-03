@@ -1,0 +1,191 @@
+/* Allgemeines Styling für den Body */
+body {
+  /* Setzt ein festes, zentriertes Hintergrundbild, das den gesamten Bildschirm abdeckt */
+  background: url('/images/hintergrund2.jpg') no-repeat center center fixed;
+  background-size: cover; /* Skaliert das Bild so, dass es den gesamten Hintergrund ausfüllt */
+  font-family: Arial, sans-serif; /* Legt die Schriftart für den gesamten Text fest */
+  margin: 20px; /* Fügt einen äußeren Abstand um den Body hinzu */
+}
+
+/* Header & Datum/Uhrzeit */
+/* Styling für den Kopfbereich, der den Titel und das aktuelle Datum/Uhrzeit anzeigt */
+header {
+  text-align: center; /* Zentriert den Text im Header */
+  margin: 20px auto; /* 20px Abstand oben und unten; horizontal zentriert (auto) */
+  max-width: 600px; /* Maximale Breite des Headers */
+  padding: 10px; /* Innenabstand im Header */
+  background: #fff; /* Weißer Hintergrund */
+  border-radius: 4px; /* Leicht abgerundete Ecken */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Fügt einen leichten Schatten hinzu */
+}
+
+/* Styling für den Container, der das aktuelle Datum und die Uhrzeit anzeigt */
+#current-date-time {
+  font-size: 1.2em; /* Größere Schriftgröße */
+  color: #555; /* Dunkelgraue Schriftfarbe */
+}
+
+/* Kalender-Container */
+/* Container für den Kalender */
+#calendar {
+  margin: 20px auto; /* Vertikaler Abstand und horizontal zentriert */
+  max-width: 600px; /* Maximale Breite des Containers */
+  padding: 10px; /* Innenabstand */
+  background: #fff; /* Weißer Hintergrund */
+  border-radius: 4px; /* Abgerundete Ecken */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Leichter Schatteneffekt */
+}
+
+/* Styling für den Header des Kalenders, welcher Navigations- und Monatsanzeige-Elemente enthält */
+.calendar-header {
+  display: flex; /* Nutzt Flexbox für die Layout-Ausrichtung */
+  justify-content: space-between; /* Verteilt den Platz gleichmäßig zwischen den Elementen */
+  align-items: center; /* Zentriert die Elemente vertikal */
+  margin-bottom: 10px; /* Abstand nach unten */
+}
+
+/* Styling für die Monatsanzeige im Kalender-Header */
+.month-display {
+  text-align: center; /* Zentriert den Text */
+  flex-grow: 1; /* Nimmt den verbleibenden Platz im Flex-Container ein */
+  font-size: 1.2em; /* Größere Schriftgröße */
+}
+
+/* Styling für Navigations-Buttons im Kalender */
+.nav-btn {
+  flex-basis: 50px; /* Legt die Basisbreite fest */
+  padding: 5px; /* Innenabstand */
+  font-size: 1.2em; /* Größere Schriftgröße */
+}
+
+/* Styling für das Label der "Ganztägig"-Checkbox in einem Formular */
+.form-row label[for="allDay"] {
+  display: inline-flex; /* Nutzt Flexbox im Inline-Modus */
+  align-items: center; /* Zentriert den Inhalt vertikal */
+  margin-left: 10px; /* Abstand nach links */
+}
+
+/* Styling für das Input-Element innerhalb des "Ganztägig"-Labels */
+.form-row label[for="allDay"] input {
+  margin-right: 5px; /* Abstand rechts neben dem Input */
+}
+
+/* Styling für Buttons im Kalender-Header */
+.calendar-header button {
+  padding: 5px 10px; /* Innenabstand oben/unten und links/rechts */
+  font-size: 1em; /* Standard-Schriftgröße */
+  cursor: pointer; /* Ändert den Cursor beim Überfahren in einen Zeiger */
+}
+
+/* Wochentagsnamen */
+/* Container für die Anzeige der Wochentage */
+.calendar-day-names {
+  display: grid; /* Nutzt Grid-Layout */
+  grid-template-columns: repeat(7, 1fr); /* Erstellt 7 gleich breite Spalten */
+  font-weight: bold; /* Fettschrift für die Wochentage */
+  text-align: center; /* Zentriert den Text */
+  margin-bottom: 5px; /* Abstand nach unten */
+}
+
+/* Styling für einzelne Zellen, die die Wochentagsnamen enthalten */
+.calendar-day-name {
+  padding: 5px 0; /* Vertikaler Innenabstand */
+}
+
+/* Kalender-Gitter */
+/* Layout für den Kalender in einem 7-Spalten-Grid */
+.calendar-grid {
+  display: grid; /* Nutzt Grid-Layout */
+  grid-template-columns: repeat(7, 1fr); /* Sieben gleich breite Spalten */
+  gap: 5px; /* Abstand zwischen den Zellen */
+}
+
+/* Zellen für einzelne Tage im Kalender */
+.calendar-cell {
+  padding: 10px; /* Innenabstand in der Zelle */
+  text-align: center; /* Zentriert den Text */
+  background: #eaeaea; /* Hellgrauer Hintergrund */
+  border-radius: 4px; /* Abgerundete Ecken */
+}
+
+/* Styling für leere Zellen im Kalender */
+.calendar-cell.empty {
+  background: transparent; /* Kein Hintergrund, um leere Tage hervorzuheben */
+}
+
+/* Heutigen Tag hervorheben */
+/* Besondere Formatierung für die Zelle, die das aktuelle Datum darstellt */
+.calendar-cell.today {
+  background: #4caf50; /* Grüner Hintergrund */
+  color: #fff; /* Weiße Schriftfarbe */
+  font-weight: bold; /* Fettschrift */
+}
+
+/* Beispiel-CSS für Event-Markierung */
+/* Zellen, die ein Event enthalten, bekommen einen auffälligen Rahmen */
+.calendar-cell.has-event {
+  border: 2px solid #f39c12; /* Orangefarbener Rahmen */
+  position: relative; /* Positionierungskontext für das Event-Marker-Element */
+}
+
+/* Kleiner Marker in einer Kalenderzelle, der anzeigt, dass ein Event stattfindet */
+.event-marker {
+  width: 8px; /* Breite des Markers */
+  height: 8px; /* Höhe des Markers */
+  background-color: #f39c12; /* Orangefarbige Hintergrundfarbe */
+  border-radius: 50%; /* Runde Form */
+  position: absolute; /* Absolute Positionierung relativ zur Zelle */
+  bottom: 5px; /* Abstand vom unteren Rand der Zelle */
+  right: 5px; /* Abstand vom rechten Rand der Zelle */
+}
+
+/* Weitere allgemeine Styles */
+
+/* Überschrift (h1) Styling */
+h1 {
+  color: #333; /* Farbe für den Text */
+}
+
+/* Überschrift (h1#form-title) Styling */
+h1#form-title {
+  color: #f1fff0; /* Farbe für den Text */
+}
+
+/* Styling für Formulare */
+form {
+  background: #fff; /* Weißer Hintergrund */
+  padding: 15px; /* Innenabstand */
+  border-radius: 4px; /* Abgerundete Ecken */
+  margin-bottom: 20px; /* Abstand unter dem Formular */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Leichter Schatteneffekt */
+}
+  
+/* Styling für Eingabefelder, Textareas und Buttons */
+input, textarea, button {
+  display: block; /* Jedes Element wird in einer eigenen Zeile angezeigt */
+  width: 100%; /* Elemente nehmen die volle Breite ihres Containers ein */
+  margin: 10px 0; /* Vertikaler Abstand zwischen den Elementen */
+  padding: 8px; /* Innenabstand innerhalb der Elemente */
+  box-sizing: border-box; /* Sorgt dafür, dass Padding und Border in der Gesamtbreite enthalten sind */
+}
+  
+/* Styling für ungeordnete Listen */
+ul {
+  list-style: none; /* Entfernt die Standard-Aufzählungszeichen */
+  padding: 0; /* Kein Innenabstand */
+}
+  
+/* Styling für Listenelemente */
+li {
+  background: #fff; /* Weißer Hintergrund */
+  margin-bottom: 15px; /* Abstand zwischen den Listenelementen */
+  padding: 15px; /* Innenabstand in den Elementen */
+  border-radius: 4px; /* Abgerundete Ecken */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Schatteneffekt */
+}
+  
+/* Allgemeines Styling für Buttons */
+button {
+  margin-right: 10px; /* Abstand rechts zwischen Buttons */
+  cursor: pointer; /* Ändert den Cursor beim Überfahren in einen Zeiger */
+}

@@ -1,0 +1,318 @@
+/*--------------------------------------------------------------------------------------------------------
+-- NAVIGATION
+--------------------------------------------------------------------------------------------------------*/
+
+/* 
+ * Navigationsleiste 
+ * - display: flex -> Der nav-Container wird zu einem Flex-Container.
+ * - justify-content: center -> Zentriert die Navigationselemente horizontal.
+ * - gap: 15px -> Fügt einen Abstand von 15px zwischen den Navigationselementen hinzu.
+ * - margin-top: 20px -> Setzt einen oberen Außenabstand von 20px zur Navigation.
+ */
+ nav {
+  display: flex;             /* Flexbox-Layout aktivieren */
+  justify-content: center;   /* Horizontale Zentrierung der Kindelemente */
+  gap: 15px;                 /* Abstand zwischen den Navigationselementen */
+  margin-top: 20px;          /* Abstand oberhalb des Navigationsbereichs */
+}
+
+/* 
+ * Buttons für die Navigation (Klasse: .nav-button)
+ * - Legt Hintergrundfarbe, Schriftfarbe, Schriftgröße und Polsterung fest.
+ * - border: none -> Entfernt Standard-Rahmen.
+ * - border-radius: 8px -> Rundet die Ecken der Buttons ab.
+ * - cursor: pointer -> Zeigt bei Mouseover einen Zeigefinger an.
+ * - transition: background 0.3s, transform 0.2s -> Sorgt für sanfte Übergänge bei Hintergrund- und Skalierungsänderungen.
+ * - box-shadow -> Fügt einen Schlagschatten hinzu, der einen leichten 3D-Effekt erzeugt.
+ */
+.nav-button {
+  background: #75be53;                /* Grüner Hintergrund */
+  color: black;                       /* Schwarzer Text */
+  font-size: 18px;                    /* Schriftgröße */
+  font-weight: bold;                  /* Fetter Text */
+  padding: 12px 20px;                 /* Innenabstand */
+  border: none;                       /* Kein Rahmen */
+  border-radius: 8px;                 /* Abgerundete Ecken */
+  cursor: pointer;                    /* Zeiger beim Überfahren */
+  transition: background 0.3s, transform 0.2s;  /* Sanfte Übergänge bei Farbe und Skalierung */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);   /* Schlagschatten */
+}
+
+/* 
+ * Hover-Effekt für die Navigationsbuttons
+ * - Ändert die Hintergrundfarbe.
+ * - transform: scale(1.05) -> Vergrößert den Button leicht bei Hover.
+ */
+.nav-button:hover {
+  background: #e9ff85;    /* Hellerer Hintergrund beim Überfahren */
+  transform: scale(1.05); /* Leichte Vergrößerung */
+}
+
+/* Logout-Button */
+.logout-button {
+  background: darkred;              /* Dunkelroter Hintergrund */
+  color: black;                     /* Schwarzer Text */
+  font-size: 18px;                  /* Schriftgröße */
+  font-weight: bold;                /* Fetter Text */
+  padding: 12px 20px;               /* Innenabstand */
+  border: none;                     /* Kein Rahmen */
+  border-radius: 8px;               /* Abgerundete Ecken */
+  cursor: pointer;                  /* Zeiger beim Überfahren */
+  transition: background 0.3s, transform 0.2s; /* Sanfte Übergänge */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);    /* Schlagschatten */
+}
+
+.logout-button:hover {
+  background: rgb(255, 0, 0);         /* Helleres Rot beim Hover */
+}
+
+/*--------------------------------------------------------------------------------------------------------
+-- BUTTON IN MAIN
+--------------------------------------------------------------------------------------------------------*/
+
+/* 
+ * Allgemeiner Button-Stil (Klasse: .button)
+ * - display: block -> Macht das Element zu einem Block, sodass es zentriert werden kann.
+ * - background, color, font-size, font-weight und padding definieren das Aussehen.
+ * - border-radius: 8px -> Rundet die Ecken ab.
+ * - text-align: center -> Zentriert den Text innerhalb des Buttons.
+ * - text-decoration: none -> Entfernt z. B. Unterstreichungen bei Links.
+ * - transition: background 0.3s, transform 0.2s -> Animierte Übergänge.
+ * - box-shadow -> Fügt einen Schlagschatten hinzu.
+ * - margin: 10px auto -> Vertikaler Abstand von 10px, horizontal zentriert.
+ */
+.button {
+  display: block;                   /* Block-Element, um zentriert zu werden */
+  background: #070707;              /* Sehr dunkler Hintergrund */
+  color: rgb(199, 199, 199);         /* Hellgrauer Text */
+  font-size: 18px;                  /* Schriftgröße */
+  font-weight: bold;                /* Fetter Text */
+  padding: 12px 20px;               /* Innenabstand */
+  border-radius: 8px;               /* Abgerundete Ecken */
+  text-align: center;               /* Zentrierter Text */
+  text-decoration: none;            /* Keine Unterstreichung */
+  transition: background 0.3s, transform 0.2s; /* Übergänge für Hintergrund und Skalierung */
+  box-shadow: 5px 5px 20px rgba(255, 0, 0, 0.5);  /* Schlagschatten */
+  margin: 10px auto;                /* Vertikaler Abstand, zentriert */
+}
+
+/* 
+ * Hover-Effekt für allgemeine Buttons
+ * - Ändert die Hintergrundfarbe.
+ * - Vergrößert den Button leicht.
+ */
+.button:hover {
+  background: #464646;  /* Dunklerer Hintergrund beim Hover */
+  transform: scale(1.05); /* Leichte Vergrößerung */
+}
+
+/*--------------------------------------------------------------------------------------------------------
+-- LISTEN
+--------------------------------------------------------------------------------------------------------*/
+
+/* 
+ * Entfernt die Standard-Aufzählungszeichen in Listen
+ * - list-style-type: none -> Keine Bullet-Points.
+ * - margin: 0 und padding: 0 -> Entfernt Standard-Abstände.
+ */
+ul {
+  list-style-type: none;  /* Keine Aufzählungszeichen */
+  margin: 0;              /* Kein Außenabstand */
+  padding: 0;             /* Kein Innenabstand */
+}
+
+/*--------------------------------------------------------------------------------------------------------
+-- BODY und CONTAINER
+--------------------------------------------------------------------------------------------------------*/
+
+/* 
+ * Styling für den Body
+ * - Hintergrundbild wird zentriert, nicht wiederholt und fixiert.
+ * - background-size: cover -> Das Bild füllt den gesamten Hintergrund.
+ */
+body {
+  background: url('../_images/body-hintergrund.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* 
+ * Container, der den Hauptinhalt der Seite umschließt
+ * - display: flex -> Macht den Container zu einem Flex-Container.
+ * - align-items: center -> Zentriert den Inhalt vertikal.
+ * - flex-direction: column -> Ordnet die Kinder untereinander an.
+ * - height: 100vh -> Der Container nimmt die volle Höhe des Viewports ein.
+ */
+.container {
+  display: flex;              /* Flexbox-Layout aktivieren */
+  align-items: center;        /* Vertikale Zentrierung */
+  flex-direction: column;     /* Elemente untereinander anordnen */
+  height: 100vh;              /* Volle Höhe des Viewports */
+}
+
+/* 
+ * Überschrift-Container (.ueberschrift-container)
+ * - Halbtransparenter dunkler Hintergrund.
+ * - Passt sich der Breite des Inhalts an (display: inline-block).
+ * - Padding, border-radius und box-shadow sorgen für ein ansprechendes Design.
+ * - color definiert die Schriftfarbe, text-align zentriert den Text.
+ */
+.ueberschrift-container {
+  background: rgba(15, 15, 15, 0.9); /* Dunkler, halbtransparenter Hintergrund */
+  display: inline-block;            /* Passt sich dem Inhalt an */
+  padding: 10px;                    /* Innenabstand */
+  border-radius: 20px;              /* Abgerundete Ecken */
+  box-shadow: 5px 5px 20px rgba(60, 255, 0, 0.5); /* Schatten */
+  color: #D3D3D3;                   /* Hellgraue Schrift */
+  text-align: center;               /* Zentrierter Text */
+}
+
+/* 
+ * Titel-Container (.titel-container)
+ * - Ähnlich wie .ueberschrift-container, aber zusätzlich absolut zentriert im Viewport.
+ */
+.titel-container {
+  background: rgba(15, 15, 15, 0.9); /* Halbtransparenter Hintergrund */
+  display: inline-block;            /* Passt sich dem Inhalt an */
+  padding: 10px;                    /* Innenabstand */
+  border-radius: 20px;              /* Abgerundete Ecken */
+  box-shadow: 5px 5px 20px rgba(60, 255, 0, 0.5); /* Schatten */
+  color: #D3D3D3;                   /* Hellgrauer Text */
+  text-align: center;               /* Zentrierter Text */
+  position: absolute;               /* Absolute Positionierung */
+  top: 50%;                        /* 50% von oben */
+  left: 50%;                       /* 50% von links */
+  transform: translate(-50%, -50%); /* Zentriert den Container exakt */
+}
+
+/*--------------------------------------------------------------------------------------------------------
+-- EDIT
+--------------------------------------------------------------------------------------------------------*/
+
+/* 
+ * Container für Editier-Formulare (.edit-container)
+ * - Halbtransparenter dunkler Hintergrund.
+ * - display: inline-block passt sich dem Inhalt an.
+ * - Padding und border-radius sorgen für ausreichend Innenabstand und abgerundete Ecken.
+ * - box-shadow fügt einen dezenten Schatten hinzu.
+ * - margin zentriert den Container horizontal.
+ * - color definiert die Textfarbe.
+ */
+.edit-container {
+  background: rgba(15, 15, 15, 0.9); /* Halbtransparenter, dunkler Hintergrund */
+  display: inline-block;            /* Passt sich dem Inhalt an */
+  padding: 50px;                    /* Großer Innenabstand */
+  border-radius: 20px;              /* Abgerundete Ecken */
+  box-shadow: 5px 5px 20px rgba(60, 255, 0, 0.5); /* Schatten */
+  margin: 20px auto;                /* Zentriert den Container horizontal */
+  color: #D3D3D3;                   /* Hellgraue Schriftfarbe */
+}
+
+/*--------------------------------------------------------------------------------------------------------
+-- TABELLEN
+--------------------------------------------------------------------------------------------------------*/
+
+/* 
+ * Container für Tabellen (.tabellen-container)
+ * - Halbtransparenter dunkler Hintergrund, Padding, abgerundete Ecken und box-shadow.
+ * - margin auto zentriert den Container horizontal.
+ * - color und text-align setzen die Schriftfarbe und zentrieren den Text.
+ */
+.tabellen-container {
+  background: rgba(31, 31, 31, 0.9); /* Dunkler, halbtransparenter Hintergrund */
+  display: inline-block;             /* Passt sich dem Inhalt an */
+  padding: 15px;                     /* Innenabstand */
+  border-radius: 20px;               /* Abgerundete Ecken */
+  box-shadow: 5px 5px 20px rgba(255, 0, 0, 0.5); /* Schlagschatten */
+  margin: 20px auto;                 /* Zentriert den Container horizontal */
+  color: #D3D3D3;                    /* Hellgraue Schriftfarbe */
+  text-align: center;                /* Zentriert den Text */
+}
+
+/* 
+ * Tabellen innerhalb des Containers
+ * - width: 100% lässt die Tabelle den vollen Container einnehmen.
+ * - border-collapse: collapse entfernt doppelte Rahmen.
+ * - border-radius und overflow sorgen dafür, dass abgerundete Ecken sichtbar bleiben.
+ */
+.tabellen-container table {
+  width: 100%;                /* Volle Breite */
+  border-collapse: collapse;  /* Keine doppelten Ränder */
+  border-radius: 10px;        /* Abgerundete Ecken der Tabelle */
+  overflow: hidden;           /* Verhindert, dass Inhalte über die Ecken hinausragen */
+}
+
+/* 
+ * Tabellenzellen und Überschriften 
+ * - Padding sorgt für ausreichenden Innenabstand.
+ * - border fügt einen Rahmen hinzu.
+ * - text-align zentriert den Inhalt in den Zellen.
+ */
+.tabellen-container th, 
+.tabellen-container td {
+  padding: 10px;               /* Innenabstand in Zellen */
+  border: 1px solid rgba(0, 0, 0, 0.5); /* Rahmen in Zellen */
+  text-align: center;          /* Zentrierter Inhalt */
+}
+
+/* 
+ * Tabellenkopf (.tabellen-container th)
+ * - Hintergrund und Schriftfarbe definieren das Aussehen des Tabellenkopfs.
+ */
+.tabellen-container th {
+  background: rgba(0, 0, 0, 0.3);  /* Transparenter dunkler Hintergrund */
+  color: #FFFFFF;                 /* Weiße Schrift */
+  font-weight: bold;              /* Fetter Text */
+}
+
+/* 
+ * Wechselnde Zeilenfarben für bessere Lesbarkeit:
+ * - nth-child(odd) -> Ungefähre Rotton-Farbe für ungerade Zeilen.
+ * - nth-child(even) -> Sehr dezent grauer Hintergrund für gerade Zeilen.
+ */
+.tabellen-container tr:nth-child(odd) {
+  background: rgba(255, 94, 0, 0.1); /* Leicht roter Hintergrund für ungerade Zeilen */
+}
+
+.tabellen-container tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05); /* Sehr dezenter grauer Hintergrund für gerade Zeilen */
+}
+
+/* 
+ * Hover-Effekt für Tabellenzeilen
+ * - Ändert den Hintergrund leicht, wenn der Mauszeiger über eine Zeile fährt.
+ * - transition sorgt für einen sanften Übergang.
+ */
+.tabellen-container tr:hover {
+  background: rgba(60, 255, 0, 0.2); /* Leicht veränderter Hintergrund beim Hover */
+  transition: background 0.3s ease;  /* Sanfter Übergang */
+}
+
+/*--------------------------------------------------------------------------------------------------------
+-- LINKS
+--------------------------------------------------------------------------------------------------------*/
+
+/* 
+ * Standard-Styling für Links
+ * - Farbe: Rot (#ff0000) wird als Standardfarbe verwendet.
+ * - text-decoration: none entfernt die Unterstreichung.
+ * - font-weight: bold macht den Text fett.
+ * - transition sorgt für sanfte Übergänge bei Farb- und Schattenänderungen.
+ */
+a {
+  color: #ff0000;              /* Rote Schriftfarbe */
+  text-decoration: none;       /* Keine Unterstreichung */
+  font-weight: bold;           /* Fettgedruckt */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Übergangseffekte */
+}
+
+/* 
+ * Hover-Effekt für Links
+ * - Ändert die Farbe zu einem helleren Grünton beim Überfahren.
+ * - text-shadow fügt einen leuchtenden Effekt hinzu.
+ * - text-decoration: underline unterstreicht den Link optional.
+ */
+a:hover {
+  color: #A0FF80;                           /* Helleres Grün beim Hover */
+  text-shadow: 0px 0px 10px rgba(60, 255, 0, 0.8);  /* Leuchtender Schatten */
+  text-decoration: underline;               /* Unterstreichung beim Hover */
+}

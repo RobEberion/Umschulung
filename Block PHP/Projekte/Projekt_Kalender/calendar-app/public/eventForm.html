@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Setzt den Zeichensatz der Seite auf UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Der Titel der Seite, der im Browser-Tab angezeigt wird -->
+  <title>Termin erstellen / bearbeiten</title>
+  <!-- Einbinden der externen CSS-Datei für das allgemeine Styling -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Internes CSS für spezifische Styling-Anpassungen dieser Seite -->
+  <style>
+    /* Stil für deaktivierte Eingabefelder, z.B. wenn "Ganztägig" aktiviert ist */
+    .disabled-input {
+      background-color: #ddd; /* Hellgrauer Hintergrund */
+      color: #666; /* Dunkelgraue Schriftfarbe */
+    }
+    /* Styling für Zeilen im Formular, in denen Elemente nebeneinander angeordnet werden */
+    .form-row {
+      display: flex; /* Nutzt Flexbox, um die Elemente in einer Zeile auszurichten */
+      align-items: center; /* Zentriert die Elemente vertikal */
+      gap: 10px; /* Fügt einen Abstand von 10px zwischen den Elementen ein */
+      margin-bottom: 10px; /* Abstand unterhalb jeder Formularzeile */
+    }
+    /* Spezifisches Styling, um das Kontrollkästchen und den zugehörigen Text nebeneinander darzustellen */
+    .form-row label[for="allDay"] {
+      display: inline-flex; /* Nutzt Inline-Flexbox, damit Label und Checkbox zusammen bleiben */
+      align-items: center; /* Zentriert die Checkbox und den Text vertikal */
+      gap: 5px; /* Fügt einen kleinen Abstand (5px) zwischen Checkbox und Text ein */
+    }
+  </style>
+</head>
+<body>
+  <!-- Überschrift für das Formular, zeigt den aktuellen Modus (Erstellen/Bearbeiten) -->
+  <h1 id="form-title">Termin erstellen</h1>
+  
+  <!-- Formular zum Erstellen bzw. Bearbeiten eines Termins -->
+  <form id="event-form">
+    <!-- Verstecktes Feld zur Speicherung der Event-ID (wichtig beim Bearbeiten eines bestehenden Termins) -->
+    <input type="hidden" name="eventId" id="eventId">
+    
+    <!-- Eingabefeld für den Titel des Termins; Pflichtfeld -->
+    <input type="text" name="titel" placeholder="Titel" required>
+    
+    <!-- Textbereich für eine optionale Beschreibung des Termins -->
+    <textarea name="beschreibung" placeholder="Beschreibung"></textarea>
+    
+    <!-- Formularzeile für das Startdatum und die Startzeit -->
+    <div class="form-row">
+      <!-- Beschriftung für das Startdatum -->
+      <label for="startInput">Startdatum:</label>
+      <!-- Eingabefeld für Datum und Uhrzeit; Pflichtfeld -->
+      <input type="datetime-local" name="start" id="startInput" required>
+    </div>
+    
+    <!-- Formularzeile für das optionale Enddatum und die Endzeit -->
+    <div class="form-row">
+      <!-- Beschriftung für das Enddatum -->
+      <label for="endInput">Enddatum (optional):</label>
+      <!-- Eingabefeld für Datum und Uhrzeit -->
+      <input type="datetime-local" name="ende" id="endInput">
+    </div>
+    
+    <!-- Formularzeile für das Ganztägig-Kontrollkästchen -->
+    <div class="form-row">
+      <label for="allDay">
+        <!-- Kontrollkästchen, das angibt, ob das Event als ganztägig markiert werden soll -->
+        <input type="checkbox" id="allDay">
+        Ganztägig
+      </label>
+    </div>
+    
+    <!-- Eingabefeld für den Ort des Termins -->
+    <input type="text" name="ort" placeholder="Ort">
+    
+    <!-- Container für die Formular-Schaltflächen -->
+    <div class="form-buttons">
+      <!-- Button zum Absenden des Formulars (speichert den Termin) -->
+      <button type="submit">Speichern</button>
+      <!-- Button zum Abbrechen, ohne das Formular abzusenden -->
+      <button type="button" id="cancel-btn">Abbrechen</button>
+    </div>
+  </form>
+
+  <!-- Einbinden der JavaScript-Datei, die die Formularlogik (z.B. Validierung, Interaktivität) steuert -->
+  <script src="/js/eventForm.js"></script>
+</body>
+</html>

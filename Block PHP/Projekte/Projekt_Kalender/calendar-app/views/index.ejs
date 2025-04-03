@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Setzt den Zeichensatz der Seite auf UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Der Titel, der in der Browser-Registerkarte angezeigt wird -->
+  <title>Kalender App</title>
+  <!-- Bindet die CSS-Datei ein, die das Styling der Seite definiert -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Kopfbereich der Seite -->
+  <header>
+    <!-- Hauptüberschrift der Anwendung -->
+    <h1>Kalender App</h1>
+    <!-- Container zur Anzeige des aktuellen Datums und der aktuellen Uhrzeit -->
+    <div id="current-date-time"></div>
+  </header>
+
+  <!-- Container, in dem der Kalender angezeigt wird -->
+  <div id="calendar"></div>
+  
+  <!-- Button, um einen neuen Termin zu erstellen -->
+  <button id="create-event-btn">Neuen Termin erstellen</button>
+
+  <!-- Liste, die alle Ereignisse (Events) anzeigt -->
+  <ul id="event-list">
+    <!-- EJS-Schleife: Iteriere über alle Events, die an das Template übergeben wurden -->
+    <% events.forEach(event => { 
+         // Erstelle ein JavaScript Date-Objekt aus dem "start"-Feld des Events
+         const startDate = new Date(event.start);
+         // Prüfe, ob der Termin ganztägig ist (Stunden und Minuten sind beide 0)
+         const isAllDay = startDate.getHours() === 0 && startDate.getMinutes() === 0;
+    %>
+      <!-- Ein einzelnes Event wird als Listeneintrag dargestellt -->
+      <li data-id="<%= event._id %>" 
+          data-titel="<%= event.titel %>" 
+          data-beschreibung="<%= event.beschreibung %>" 
+          data-start="<%= event.start %>" 
+          data-ende="<%= event.ende %>" 
+          data-ort="<%= event.ort %>">
+        <!-- Anzeige des Titels des Events -->
+        <h2><%= event.titel %></h2>
+        <!-- Anzeige der Beschreibung des Events -->
+        <p><%= event.beschreibung %></p>
+        <!-- Anzeige des Startzeitpunkts oder den Hinweis "Ganztägig", falls zutreffend -->
+        <p>
+          <%= isAllDay ? 'Ganztägig' : 'Start: ' + new Date(event.start).toLocaleString() %>
+        </p>
+        <!-- Falls das Event nicht ganztägig ist und ein Endzeitpunkt definiert wurde, wird dieser angezeigt -->
+        <% if(!isAllDay && event.ende) { %>
+          <p>Ende: <%= new Date(event.ende).toLocaleString() %></p>
+        <% } %>
+        <!-- Falls ein Ort für das Event angegeben wurde, wird dieser angezeigt -->
+        <% if(event.ort) { %>
+          <p>Ort: <%= event.ort %></p>
+        <% } %>
+        <!-- Button zum Bearbeiten des Events -->
+        <button class="edit-btn">Bearbeiten</button>
+        <!-- Button zum Löschen des Events -->
+        <button class="delete-btn">Löschen</button>
+      </li>
+    <% }) %>
+  </ul>
+
+  <!-- Bindet die JavaScript-Datei ein, die die Interaktivität der Seite (z.B. Event-Handling) steuert -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
